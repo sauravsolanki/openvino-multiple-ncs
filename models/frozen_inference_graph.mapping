@@ -1,0 +1,979 @@
+<?xml version="1.0" ?>
+<mapping>
+	<map>
+		<framework name="image_tensor" out_port_id="0"/>
+		<IR id="0" name="image_tensor" out_port_id="0"/>
+	</map>
+	<map>
+		<framework name="Preprocessor/sub" out_port_id="0"/>
+		<IR id="1" name="ScaleShift/Preprocessor/sub/add_" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/conv1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="2" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/conv1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/conv1/Relu6" out_port_id="0"/>
+		<IR id="3" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/conv1/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/pool1/MaxPool" out_port_id="0"/>
+		<IR id="4" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/pool1/MaxPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_1/bottleneck_v1/shortcut/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="5" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_1/bottleneck_v1/shortcut/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_1/bottleneck_v1/conv1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="6" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_1/bottleneck_v1/conv1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_1/bottleneck_v1/conv1/Relu6" out_port_id="0"/>
+		<IR id="7" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_1/bottleneck_v1/conv1/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_1/bottleneck_v1/conv2/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="8" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_1/bottleneck_v1/conv2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_1/bottleneck_v1/conv2/Relu6" out_port_id="0"/>
+		<IR id="9" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_1/bottleneck_v1/conv2/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_1/bottleneck_v1/conv3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="10" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_1/bottleneck_v1/conv3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_1/bottleneck_v1/add" out_port_id="0"/>
+		<IR id="11" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_1/bottleneck_v1/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_1/bottleneck_v1/Relu" out_port_id="0"/>
+		<IR id="12" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_1/bottleneck_v1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_2/bottleneck_v1/conv1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="13" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_2/bottleneck_v1/conv1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_2/bottleneck_v1/conv1/Relu6" out_port_id="0"/>
+		<IR id="14" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_2/bottleneck_v1/conv1/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_2/bottleneck_v1/conv2/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="15" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_2/bottleneck_v1/conv2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_2/bottleneck_v1/conv2/Relu6" out_port_id="0"/>
+		<IR id="16" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_2/bottleneck_v1/conv2/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_2/bottleneck_v1/conv3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="17" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_2/bottleneck_v1/conv3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_2/bottleneck_v1/add" out_port_id="0"/>
+		<IR id="18" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_2/bottleneck_v1/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_2/bottleneck_v1/Relu" out_port_id="0"/>
+		<IR id="19" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_2/bottleneck_v1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_3/bottleneck_v1/conv1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="20" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_3/bottleneck_v1/conv1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_3/bottleneck_v1/conv1/Relu6" out_port_id="0"/>
+		<IR id="21" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_3/bottleneck_v1/conv1/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_3/bottleneck_v1/conv2/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="22" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_3/bottleneck_v1/conv2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_3/bottleneck_v1/conv2/Relu6" out_port_id="0"/>
+		<IR id="23" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_3/bottleneck_v1/conv2/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_3/bottleneck_v1/conv3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="24" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_3/bottleneck_v1/conv3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_3/bottleneck_v1/add" out_port_id="0"/>
+		<IR id="25" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_3/bottleneck_v1/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_3/bottleneck_v1/Relu" out_port_id="0"/>
+		<IR id="26" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/unit_3/bottleneck_v1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_1/bottleneck_v1/shortcut/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="28" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_1/bottleneck_v1/shortcut/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_1/bottleneck_v1/conv1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="29" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_1/bottleneck_v1/conv1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_1/bottleneck_v1/conv2/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="31" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_1/bottleneck_v1/conv2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_1/bottleneck_v1/conv2/Relu6" out_port_id="0"/>
+		<IR id="32" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_1/bottleneck_v1/conv2/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_1/bottleneck_v1/conv3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="33" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_1/bottleneck_v1/conv3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_1/bottleneck_v1/add" out_port_id="0"/>
+		<IR id="34" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_1/bottleneck_v1/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_1/bottleneck_v1/Relu" out_port_id="0"/>
+		<IR id="35" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_1/bottleneck_v1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_2/bottleneck_v1/conv1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="36" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_2/bottleneck_v1/conv1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_2/bottleneck_v1/conv1/Relu6" out_port_id="0"/>
+		<IR id="37" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_2/bottleneck_v1/conv1/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_2/bottleneck_v1/conv2/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="38" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_2/bottleneck_v1/conv2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_2/bottleneck_v1/conv2/Relu6" out_port_id="0"/>
+		<IR id="39" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_2/bottleneck_v1/conv2/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_2/bottleneck_v1/conv3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="40" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_2/bottleneck_v1/conv3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_2/bottleneck_v1/add" out_port_id="0"/>
+		<IR id="41" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_2/bottleneck_v1/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_2/bottleneck_v1/Relu" out_port_id="0"/>
+		<IR id="42" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_2/bottleneck_v1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_3/bottleneck_v1/conv1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="43" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_3/bottleneck_v1/conv1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_3/bottleneck_v1/conv2/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="45" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_3/bottleneck_v1/conv2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_3/bottleneck_v1/conv2/Relu6" out_port_id="0"/>
+		<IR id="46" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_3/bottleneck_v1/conv2/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_3/bottleneck_v1/conv3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="47" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_3/bottleneck_v1/conv3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_3/bottleneck_v1/add" out_port_id="0"/>
+		<IR id="48" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_3/bottleneck_v1/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_3/bottleneck_v1/Relu" out_port_id="0"/>
+		<IR id="49" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_3/bottleneck_v1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_4/bottleneck_v1/conv1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="50" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_4/bottleneck_v1/conv1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_4/bottleneck_v1/conv1/Relu6" out_port_id="0"/>
+		<IR id="51" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_4/bottleneck_v1/conv1/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_4/bottleneck_v1/conv2/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="52" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_4/bottleneck_v1/conv2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_4/bottleneck_v1/conv2/Relu6" out_port_id="0"/>
+		<IR id="53" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_4/bottleneck_v1/conv2/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_4/bottleneck_v1/conv3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="54" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_4/bottleneck_v1/conv3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_4/bottleneck_v1/add" out_port_id="0"/>
+		<IR id="55" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_4/bottleneck_v1/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_4/bottleneck_v1/Relu" out_port_id="0"/>
+		<IR id="56" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_4/bottleneck_v1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/MaxPool2D/MaxPool" out_port_id="0"/>
+		<IR id="57" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/MaxPool2D/MaxPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_1/bottleneck_v1/shortcut/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="58" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_1/bottleneck_v1/shortcut/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_1/bottleneck_v1/conv1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="59" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_1/bottleneck_v1/conv1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_1/bottleneck_v1/conv1/Relu6" out_port_id="0"/>
+		<IR id="60" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_1/bottleneck_v1/conv1/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_1/bottleneck_v1/conv2/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="61" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_1/bottleneck_v1/conv2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_1/bottleneck_v1/conv2/Relu6" out_port_id="0"/>
+		<IR id="62" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_1/bottleneck_v1/conv2/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_1/bottleneck_v1/conv3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="63" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_1/bottleneck_v1/conv3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_1/bottleneck_v1/add" out_port_id="0"/>
+		<IR id="64" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_1/bottleneck_v1/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_1/bottleneck_v1/Relu" out_port_id="0"/>
+		<IR id="65" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_1/bottleneck_v1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_2/bottleneck_v1/conv1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="66" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_2/bottleneck_v1/conv1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_2/bottleneck_v1/conv1/Relu6" out_port_id="0"/>
+		<IR id="67" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_2/bottleneck_v1/conv1/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_2/bottleneck_v1/conv2/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="68" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_2/bottleneck_v1/conv2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_2/bottleneck_v1/conv2/Relu6" out_port_id="0"/>
+		<IR id="69" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_2/bottleneck_v1/conv2/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_2/bottleneck_v1/conv3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="70" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_2/bottleneck_v1/conv3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_2/bottleneck_v1/add" out_port_id="0"/>
+		<IR id="71" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_2/bottleneck_v1/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_2/bottleneck_v1/Relu" out_port_id="0"/>
+		<IR id="72" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_2/bottleneck_v1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_3/bottleneck_v1/conv1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="73" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_3/bottleneck_v1/conv1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_3/bottleneck_v1/conv1/Relu6" out_port_id="0"/>
+		<IR id="74" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_3/bottleneck_v1/conv1/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_3/bottleneck_v1/conv2/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="75" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_3/bottleneck_v1/conv2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_3/bottleneck_v1/conv2/Relu6" out_port_id="0"/>
+		<IR id="76" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_3/bottleneck_v1/conv2/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_3/bottleneck_v1/conv3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="77" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_3/bottleneck_v1/conv3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_3/bottleneck_v1/add" out_port_id="0"/>
+		<IR id="78" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_3/bottleneck_v1/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_3/bottleneck_v1/Relu" out_port_id="0"/>
+		<IR id="79" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_3/bottleneck_v1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_4/bottleneck_v1/conv1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="80" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_4/bottleneck_v1/conv1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_4/bottleneck_v1/conv1/Relu6" out_port_id="0"/>
+		<IR id="81" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_4/bottleneck_v1/conv1/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_4/bottleneck_v1/conv2/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="82" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_4/bottleneck_v1/conv2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_4/bottleneck_v1/conv2/Relu6" out_port_id="0"/>
+		<IR id="83" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_4/bottleneck_v1/conv2/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_4/bottleneck_v1/conv3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="84" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_4/bottleneck_v1/conv3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_4/bottleneck_v1/add" out_port_id="0"/>
+		<IR id="85" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_4/bottleneck_v1/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_4/bottleneck_v1/Relu" out_port_id="0"/>
+		<IR id="86" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_4/bottleneck_v1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_5/bottleneck_v1/conv1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="87" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_5/bottleneck_v1/conv1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_5/bottleneck_v1/conv1/Relu6" out_port_id="0"/>
+		<IR id="88" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_5/bottleneck_v1/conv1/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_5/bottleneck_v1/conv2/Relu6" out_port_id="0"/>
+		<IR id="90" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_5/bottleneck_v1/conv2/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_5/bottleneck_v1/conv3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="91" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_5/bottleneck_v1/conv3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_5/bottleneck_v1/add" out_port_id="0"/>
+		<IR id="92" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_5/bottleneck_v1/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_5/bottleneck_v1/Relu" out_port_id="0"/>
+		<IR id="93" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_5/bottleneck_v1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_6/bottleneck_v1/conv1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="94" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_6/bottleneck_v1/conv1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_6/bottleneck_v1/conv1/Relu6" out_port_id="0"/>
+		<IR id="95" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_6/bottleneck_v1/conv1/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_6/bottleneck_v1/conv2/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="96" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_6/bottleneck_v1/conv2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_6/bottleneck_v1/conv2/Relu6" out_port_id="0"/>
+		<IR id="97" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_6/bottleneck_v1/conv2/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_6/bottleneck_v1/conv3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="98" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_6/bottleneck_v1/conv3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_6/bottleneck_v1/add" out_port_id="0"/>
+		<IR id="99" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_6/bottleneck_v1/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_6/bottleneck_v1/Relu" out_port_id="0"/>
+		<IR id="100" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_6/bottleneck_v1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/MaxPool2D/MaxPool" out_port_id="0"/>
+		<IR id="101" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/MaxPool2D/MaxPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_1/bottleneck_v1/shortcut/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="102" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_1/bottleneck_v1/shortcut/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_1/bottleneck_v1/conv1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="103" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_1/bottleneck_v1/conv1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_1/bottleneck_v1/conv1/Relu6" out_port_id="0"/>
+		<IR id="104" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_1/bottleneck_v1/conv1/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_1/bottleneck_v1/conv2/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="105" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_1/bottleneck_v1/conv2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_1/bottleneck_v1/conv2/Relu6" out_port_id="0"/>
+		<IR id="106" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_1/bottleneck_v1/conv2/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_1/bottleneck_v1/conv3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="107" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_1/bottleneck_v1/conv3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_1/bottleneck_v1/add" out_port_id="0"/>
+		<IR id="108" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_1/bottleneck_v1/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_1/bottleneck_v1/Relu" out_port_id="0"/>
+		<IR id="109" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_1/bottleneck_v1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_2/bottleneck_v1/conv1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="110" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_2/bottleneck_v1/conv1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_2/bottleneck_v1/conv1/Relu6" out_port_id="0"/>
+		<IR id="111" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_2/bottleneck_v1/conv1/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_2/bottleneck_v1/conv2/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="112" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_2/bottleneck_v1/conv2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_2/bottleneck_v1/conv2/Relu6" out_port_id="0"/>
+		<IR id="113" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_2/bottleneck_v1/conv2/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_2/bottleneck_v1/conv3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="114" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_2/bottleneck_v1/conv3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_2/bottleneck_v1/add" out_port_id="0"/>
+		<IR id="115" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_2/bottleneck_v1/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_2/bottleneck_v1/Relu" out_port_id="0"/>
+		<IR id="116" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_2/bottleneck_v1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_3/bottleneck_v1/conv1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="117" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_3/bottleneck_v1/conv1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_3/bottleneck_v1/conv1/Relu6" out_port_id="0"/>
+		<IR id="118" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_3/bottleneck_v1/conv1/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_3/bottleneck_v1/conv2/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="119" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_3/bottleneck_v1/conv2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_3/bottleneck_v1/conv2/Relu6" out_port_id="0"/>
+		<IR id="120" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_3/bottleneck_v1/conv2/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_3/bottleneck_v1/conv3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="121" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_3/bottleneck_v1/conv3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_3/bottleneck_v1/add" out_port_id="0"/>
+		<IR id="122" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_3/bottleneck_v1/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_3/bottleneck_v1/Relu" out_port_id="0"/>
+		<IR id="123" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block4/unit_3/bottleneck_v1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/fpn/top_down/projection_3/BiasAdd" out_port_id="0"/>
+		<IR id="125" name="FeatureExtractor/resnet_v1_50/fpn/top_down/projection_3/Conv2D/Transpose" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/fpn/top_down/nearest_neighbor_upsampling/stack_1" out_port_id="0"/>
+		<IR id="143" name="FeatureExtractor/resnet_v1_50/fpn/top_down/nearest_neighbor_upsampling/stack_1/Concat_/Transpose" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/fpn/top_down/nearest_neighbor_upsampling/Reshape/shape" out_port_id="0"/>
+		<IR id="144" name="FeatureExtractor/resnet_v1_50/fpn/top_down/nearest_neighbor_upsampling/Reshape/shape/Concat_/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/fpn/top_down/nearest_neighbor_upsampling/Reshape" out_port_id="0"/>
+		<IR id="146" name="FeatureExtractor/resnet_v1_50/fpn/top_down/nearest_neighbor_upsampling/Reshape/Transpose" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/fpn/top_down/projection_2/BiasAdd" out_port_id="0"/>
+		<IR id="147" name="FeatureExtractor/resnet_v1_50/fpn/top_down/projection_2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/fpn/top_down/add" out_port_id="0"/>
+		<IR id="153" name="FeatureExtractor/resnet_v1_50/fpn/top_down/add/Transpose" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/fpn/top_down/nearest_neighbor_upsampling_1/stack_1" out_port_id="0"/>
+		<IR id="167" name="FeatureExtractor/resnet_v1_50/fpn/top_down/nearest_neighbor_upsampling_1/stack_1/Concat_/Transpose" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/fpn/top_down/nearest_neighbor_upsampling_1/Reshape/shape" out_port_id="0"/>
+		<IR id="168" name="FeatureExtractor/resnet_v1_50/fpn/top_down/nearest_neighbor_upsampling_1/Reshape/shape/Concat_/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/fpn/top_down/nearest_neighbor_upsampling_1/Reshape" out_port_id="0"/>
+		<IR id="170" name="FeatureExtractor/resnet_v1_50/fpn/top_down/nearest_neighbor_upsampling_1/Reshape/Transpose" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/fpn/top_down/projection_1/BiasAdd" out_port_id="0"/>
+		<IR id="171" name="FeatureExtractor/resnet_v1_50/fpn/top_down/projection_1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/fpn/top_down/add_1" out_port_id="0"/>
+		<IR id="172" name="FeatureExtractor/resnet_v1_50/fpn/top_down/add_1" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/fpn/top_down/smoothing_1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="173" name="FeatureExtractor/resnet_v1_50/fpn/top_down/smoothing_1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/fpn/top_down/smoothing_1/Relu6" out_port_id="0"/>
+		<IR id="174" name="FeatureExtractor/resnet_v1_50/fpn/top_down/smoothing_1/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_0/BatchNorm/feature_0/FusedBatchNorm" out_port_id="0"/>
+		<IR id="175" name="WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_0/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor/Relu6" out_port_id="0"/>
+		<IR id="176" name="WeightSharedConvolutionalBoxPredictor/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_1/BatchNorm/feature_0/FusedBatchNorm" out_port_id="0"/>
+		<IR id="177" name="WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor/Relu6_1" out_port_id="0"/>
+		<IR id="178" name="WeightSharedConvolutionalBoxPredictor/Relu6_1" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_2/BatchNorm/feature_0/FusedBatchNorm" out_port_id="0"/>
+		<IR id="179" name="WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor/Relu6_2" out_port_id="0"/>
+		<IR id="180" name="WeightSharedConvolutionalBoxPredictor/Relu6_2" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_3/BatchNorm/feature_0/FusedBatchNorm" out_port_id="0"/>
+		<IR id="181" name="WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor/Relu6_3" out_port_id="0"/>
+		<IR id="182" name="WeightSharedConvolutionalBoxPredictor/Relu6_3" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor/BoxPredictor/Conv2D" out_port_id="0"/>
+		<IR id="184" name="WeightSharedConvolutionalBoxPredictor/BoxPredictor/Conv2D/Transpose" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor/Reshape" out_port_id="0"/>
+		<IR id="186" name="WeightSharedConvolutionalBoxPredictor/BoxPredictor/BiasAdd/Reshape" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/fpn/top_down/smoothing_2/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="187" name="FeatureExtractor/resnet_v1_50/fpn/top_down/smoothing_2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/fpn/top_down/smoothing_2/Relu6" out_port_id="0"/>
+		<IR id="188" name="FeatureExtractor/resnet_v1_50/fpn/top_down/smoothing_2/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_1/BoxPredictionTower/conv2d_0/BatchNorm/feature_1/FusedBatchNorm" out_port_id="0"/>
+		<IR id="189" name="WeightSharedConvolutionalBoxPredictor_1/BoxPredictionTower/conv2d_0/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_1/Relu6" out_port_id="0"/>
+		<IR id="190" name="WeightSharedConvolutionalBoxPredictor_1/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_1/Relu6_1" out_port_id="0"/>
+		<IR id="192" name="WeightSharedConvolutionalBoxPredictor_1/Relu6_1" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_1/BoxPredictionTower/conv2d_2/BatchNorm/feature_1/FusedBatchNorm" out_port_id="0"/>
+		<IR id="193" name="WeightSharedConvolutionalBoxPredictor_1/BoxPredictionTower/conv2d_2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_1/Relu6_2" out_port_id="0"/>
+		<IR id="194" name="WeightSharedConvolutionalBoxPredictor_1/Relu6_2" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_1/BoxPredictionTower/conv2d_3/BatchNorm/feature_1/FusedBatchNorm" out_port_id="0"/>
+		<IR id="195" name="WeightSharedConvolutionalBoxPredictor_1/BoxPredictionTower/conv2d_3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_1/Relu6_3" out_port_id="0"/>
+		<IR id="196" name="WeightSharedConvolutionalBoxPredictor_1/Relu6_3" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_1/BoxPredictor/Conv2D" out_port_id="0"/>
+		<IR id="198" name="WeightSharedConvolutionalBoxPredictor_1/BoxPredictor/Conv2D/Transpose" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_1/Reshape" out_port_id="0"/>
+		<IR id="200" name="WeightSharedConvolutionalBoxPredictor_1/BoxPredictor/BiasAdd/Reshape" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_2/BoxPredictionTower/conv2d_0/BatchNorm/feature_2/FusedBatchNorm" out_port_id="0"/>
+		<IR id="201" name="WeightSharedConvolutionalBoxPredictor_2/BoxPredictionTower/conv2d_0/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_2/Relu6" out_port_id="0"/>
+		<IR id="202" name="WeightSharedConvolutionalBoxPredictor_2/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_2/BoxPredictionTower/conv2d_1/BatchNorm/feature_2/FusedBatchNorm" out_port_id="0"/>
+		<IR id="203" name="WeightSharedConvolutionalBoxPredictor_2/BoxPredictionTower/conv2d_1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_2/Relu6_1" out_port_id="0"/>
+		<IR id="204" name="WeightSharedConvolutionalBoxPredictor_2/Relu6_1" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_2/BoxPredictionTower/conv2d_2/BatchNorm/feature_2/FusedBatchNorm" out_port_id="0"/>
+		<IR id="205" name="WeightSharedConvolutionalBoxPredictor_2/BoxPredictionTower/conv2d_2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_2/Relu6_2" out_port_id="0"/>
+		<IR id="206" name="WeightSharedConvolutionalBoxPredictor_2/Relu6_2" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_2/BoxPredictionTower/conv2d_3/BatchNorm/feature_2/FusedBatchNorm" out_port_id="0"/>
+		<IR id="207" name="WeightSharedConvolutionalBoxPredictor_2/BoxPredictionTower/conv2d_3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_2/Relu6_3" out_port_id="0"/>
+		<IR id="208" name="WeightSharedConvolutionalBoxPredictor_2/Relu6_3" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_2/BoxPredictor/Conv2D" out_port_id="0"/>
+		<IR id="210" name="WeightSharedConvolutionalBoxPredictor_2/BoxPredictor/Conv2D/Transpose" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_2/Reshape" out_port_id="0"/>
+		<IR id="212" name="WeightSharedConvolutionalBoxPredictor_2/BoxPredictor/BiasAdd/Reshape" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/fpn/bottom_up_block5/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="213" name="FeatureExtractor/resnet_v1_50/fpn/bottom_up_block5/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_3/BoxPredictionTower/conv2d_0/BatchNorm/feature_3/FusedBatchNorm" out_port_id="0"/>
+		<IR id="215" name="WeightSharedConvolutionalBoxPredictor_3/BoxPredictionTower/conv2d_0/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_3/Relu6" out_port_id="0"/>
+		<IR id="216" name="WeightSharedConvolutionalBoxPredictor_3/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_3/BoxPredictionTower/conv2d_1/BatchNorm/feature_3/FusedBatchNorm" out_port_id="0"/>
+		<IR id="217" name="WeightSharedConvolutionalBoxPredictor_3/BoxPredictionTower/conv2d_1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_3/Relu6_1" out_port_id="0"/>
+		<IR id="218" name="WeightSharedConvolutionalBoxPredictor_3/Relu6_1" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_3/Relu6_2" out_port_id="0"/>
+		<IR id="220" name="WeightSharedConvolutionalBoxPredictor_3/Relu6_2" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_3/BoxPredictionTower/conv2d_3/BatchNorm/feature_3/FusedBatchNorm" out_port_id="0"/>
+		<IR id="221" name="WeightSharedConvolutionalBoxPredictor_3/BoxPredictionTower/conv2d_3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_3/Relu6_3" out_port_id="0"/>
+		<IR id="222" name="WeightSharedConvolutionalBoxPredictor_3/Relu6_3" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_3/BoxPredictor/Conv2D" out_port_id="0"/>
+		<IR id="224" name="WeightSharedConvolutionalBoxPredictor_3/BoxPredictor/Conv2D/Transpose" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_3/Reshape" out_port_id="0"/>
+		<IR id="226" name="WeightSharedConvolutionalBoxPredictor_3/BoxPredictor/BiasAdd/Reshape" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/fpn/bottom_up_block6/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="227" name="FeatureExtractor/resnet_v1_50/fpn/bottom_up_block6/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/fpn/bottom_up_block6/Relu6" out_port_id="0"/>
+		<IR id="228" name="FeatureExtractor/resnet_v1_50/fpn/bottom_up_block6/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_4/BoxPredictionTower/conv2d_0/BatchNorm/feature_4/FusedBatchNorm" out_port_id="0"/>
+		<IR id="229" name="WeightSharedConvolutionalBoxPredictor_4/BoxPredictionTower/conv2d_0/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_4/Relu6" out_port_id="0"/>
+		<IR id="230" name="WeightSharedConvolutionalBoxPredictor_4/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_4/BoxPredictionTower/conv2d_1/BatchNorm/feature_4/FusedBatchNorm" out_port_id="0"/>
+		<IR id="231" name="WeightSharedConvolutionalBoxPredictor_4/BoxPredictionTower/conv2d_1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_4/Relu6_1" out_port_id="0"/>
+		<IR id="232" name="WeightSharedConvolutionalBoxPredictor_4/Relu6_1" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_4/BoxPredictionTower/conv2d_2/BatchNorm/feature_4/FusedBatchNorm" out_port_id="0"/>
+		<IR id="233" name="WeightSharedConvolutionalBoxPredictor_4/BoxPredictionTower/conv2d_2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_4/Relu6_2" out_port_id="0"/>
+		<IR id="234" name="WeightSharedConvolutionalBoxPredictor_4/Relu6_2" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_4/BoxPredictionTower/conv2d_3/BatchNorm/feature_4/FusedBatchNorm" out_port_id="0"/>
+		<IR id="235" name="WeightSharedConvolutionalBoxPredictor_4/BoxPredictionTower/conv2d_3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_4/Relu6_3" out_port_id="0"/>
+		<IR id="236" name="WeightSharedConvolutionalBoxPredictor_4/Relu6_3" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_4/BoxPredictor/Conv2D" out_port_id="0"/>
+		<IR id="238" name="WeightSharedConvolutionalBoxPredictor_4/BoxPredictor/Conv2D/Transpose" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_4/Reshape" out_port_id="0"/>
+		<IR id="240" name="WeightSharedConvolutionalBoxPredictor_4/BoxPredictor/BiasAdd/Reshape" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor/ClassPredictionTower/conv2d_0/BatchNorm/feature_0/FusedBatchNorm" out_port_id="0"/>
+		<IR id="244" name="WeightSharedConvolutionalBoxPredictor/ClassPredictionTower/conv2d_0/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor/Relu6_4" out_port_id="0"/>
+		<IR id="245" name="WeightSharedConvolutionalBoxPredictor/Relu6_4" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor/ClassPredictionTower/conv2d_1/BatchNorm/feature_0/FusedBatchNorm" out_port_id="0"/>
+		<IR id="246" name="WeightSharedConvolutionalBoxPredictor/ClassPredictionTower/conv2d_1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor/Relu6_5" out_port_id="0"/>
+		<IR id="247" name="WeightSharedConvolutionalBoxPredictor/Relu6_5" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor/ClassPredictionTower/conv2d_2/BatchNorm/feature_0/FusedBatchNorm" out_port_id="0"/>
+		<IR id="248" name="WeightSharedConvolutionalBoxPredictor/ClassPredictionTower/conv2d_2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor/Relu6_6" out_port_id="0"/>
+		<IR id="249" name="WeightSharedConvolutionalBoxPredictor/Relu6_6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor/ClassPredictionTower/conv2d_3/BatchNorm/feature_0/FusedBatchNorm" out_port_id="0"/>
+		<IR id="250" name="WeightSharedConvolutionalBoxPredictor/ClassPredictionTower/conv2d_3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor/Relu6_7" out_port_id="0"/>
+		<IR id="251" name="WeightSharedConvolutionalBoxPredictor/Relu6_7" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor/ClassPredictor/BiasAdd" out_port_id="0"/>
+		<IR id="253" name="WeightSharedConvolutionalBoxPredictor/ClassPredictor/Conv2D/Transpose" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor/Reshape_1" out_port_id="0"/>
+		<IR id="255" name="WeightSharedConvolutionalBoxPredictor/ClassPredictor/BiasAdd/Reshape" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_1/ClassPredictionTower/conv2d_0/BatchNorm/feature_1/FusedBatchNorm" out_port_id="0"/>
+		<IR id="256" name="WeightSharedConvolutionalBoxPredictor_1/ClassPredictionTower/conv2d_0/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_1/Relu6_4" out_port_id="0"/>
+		<IR id="257" name="WeightSharedConvolutionalBoxPredictor_1/Relu6_4" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_1/ClassPredictionTower/conv2d_1/BatchNorm/feature_1/FusedBatchNorm" out_port_id="0"/>
+		<IR id="258" name="WeightSharedConvolutionalBoxPredictor_1/ClassPredictionTower/conv2d_1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_1/Relu6_5" out_port_id="0"/>
+		<IR id="259" name="WeightSharedConvolutionalBoxPredictor_1/Relu6_5" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_1/ClassPredictionTower/conv2d_2/BatchNorm/feature_1/FusedBatchNorm" out_port_id="0"/>
+		<IR id="260" name="WeightSharedConvolutionalBoxPredictor_1/ClassPredictionTower/conv2d_2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_1/Relu6_6" out_port_id="0"/>
+		<IR id="261" name="WeightSharedConvolutionalBoxPredictor_1/Relu6_6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_1/ClassPredictionTower/conv2d_3/BatchNorm/feature_1/FusedBatchNorm" out_port_id="0"/>
+		<IR id="262" name="WeightSharedConvolutionalBoxPredictor_1/ClassPredictionTower/conv2d_3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_1/Relu6_7" out_port_id="0"/>
+		<IR id="263" name="WeightSharedConvolutionalBoxPredictor_1/Relu6_7" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_1/ClassPredictor/BiasAdd" out_port_id="0"/>
+		<IR id="265" name="WeightSharedConvolutionalBoxPredictor_1/ClassPredictor/Conv2D/Transpose" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_1/Reshape_1" out_port_id="0"/>
+		<IR id="267" name="WeightSharedConvolutionalBoxPredictor_1/ClassPredictor/BiasAdd/Reshape" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_2/Relu6_4" out_port_id="0"/>
+		<IR id="269" name="WeightSharedConvolutionalBoxPredictor_2/Relu6_4" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_2/ClassPredictionTower/conv2d_1/BatchNorm/feature_2/FusedBatchNorm" out_port_id="0"/>
+		<IR id="270" name="WeightSharedConvolutionalBoxPredictor_2/ClassPredictionTower/conv2d_1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_2/Relu6_5" out_port_id="0"/>
+		<IR id="271" name="WeightSharedConvolutionalBoxPredictor_2/Relu6_5" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_2/ClassPredictionTower/conv2d_2/BatchNorm/feature_2/FusedBatchNorm" out_port_id="0"/>
+		<IR id="272" name="WeightSharedConvolutionalBoxPredictor_2/ClassPredictionTower/conv2d_2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_2/Relu6_6" out_port_id="0"/>
+		<IR id="273" name="WeightSharedConvolutionalBoxPredictor_2/Relu6_6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_2/ClassPredictionTower/conv2d_3/BatchNorm/feature_2/FusedBatchNorm" out_port_id="0"/>
+		<IR id="274" name="WeightSharedConvolutionalBoxPredictor_2/ClassPredictionTower/conv2d_3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_2/Relu6_7" out_port_id="0"/>
+		<IR id="275" name="WeightSharedConvolutionalBoxPredictor_2/Relu6_7" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_2/ClassPredictor/Conv2D" out_port_id="0"/>
+		<IR id="277" name="WeightSharedConvolutionalBoxPredictor_2/ClassPredictor/Conv2D/Transpose" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_2/Reshape_1" out_port_id="0"/>
+		<IR id="279" name="WeightSharedConvolutionalBoxPredictor_2/ClassPredictor/BiasAdd/Reshape" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_3/ClassPredictionTower/conv2d_0/BatchNorm/feature_3/FusedBatchNorm" out_port_id="0"/>
+		<IR id="280" name="WeightSharedConvolutionalBoxPredictor_3/ClassPredictionTower/conv2d_0/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_3/Relu6_4" out_port_id="0"/>
+		<IR id="281" name="WeightSharedConvolutionalBoxPredictor_3/Relu6_4" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_3/ClassPredictionTower/conv2d_1/BatchNorm/feature_3/FusedBatchNorm" out_port_id="0"/>
+		<IR id="282" name="WeightSharedConvolutionalBoxPredictor_3/ClassPredictionTower/conv2d_1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_3/Relu6_5" out_port_id="0"/>
+		<IR id="283" name="WeightSharedConvolutionalBoxPredictor_3/Relu6_5" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_3/ClassPredictionTower/conv2d_2/BatchNorm/feature_3/FusedBatchNorm" out_port_id="0"/>
+		<IR id="284" name="WeightSharedConvolutionalBoxPredictor_3/ClassPredictionTower/conv2d_2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_3/Relu6_6" out_port_id="0"/>
+		<IR id="285" name="WeightSharedConvolutionalBoxPredictor_3/Relu6_6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_3/Relu6_7" out_port_id="0"/>
+		<IR id="287" name="WeightSharedConvolutionalBoxPredictor_3/Relu6_7" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_3/ClassPredictor/BiasAdd" out_port_id="0"/>
+		<IR id="289" name="WeightSharedConvolutionalBoxPredictor_3/ClassPredictor/Conv2D/Transpose" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_3/Reshape_1" out_port_id="0"/>
+		<IR id="291" name="WeightSharedConvolutionalBoxPredictor_3/ClassPredictor/BiasAdd/Reshape" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_4/ClassPredictionTower/conv2d_0/BatchNorm/feature_4/FusedBatchNorm" out_port_id="0"/>
+		<IR id="292" name="WeightSharedConvolutionalBoxPredictor_4/ClassPredictionTower/conv2d_0/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_4/Relu6_4" out_port_id="0"/>
+		<IR id="293" name="WeightSharedConvolutionalBoxPredictor_4/Relu6_4" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_4/ClassPredictionTower/conv2d_1/BatchNorm/feature_4/FusedBatchNorm" out_port_id="0"/>
+		<IR id="294" name="WeightSharedConvolutionalBoxPredictor_4/ClassPredictionTower/conv2d_1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_4/ClassPredictionTower/conv2d_2/BatchNorm/feature_4/FusedBatchNorm" out_port_id="0"/>
+		<IR id="296" name="WeightSharedConvolutionalBoxPredictor_4/ClassPredictionTower/conv2d_2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_4/Relu6_6" out_port_id="0"/>
+		<IR id="297" name="WeightSharedConvolutionalBoxPredictor_4/Relu6_6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_4/ClassPredictionTower/conv2d_3/BatchNorm/feature_4/FusedBatchNorm" out_port_id="0"/>
+		<IR id="298" name="WeightSharedConvolutionalBoxPredictor_4/ClassPredictionTower/conv2d_3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_4/Relu6_7" out_port_id="0"/>
+		<IR id="299" name="WeightSharedConvolutionalBoxPredictor_4/Relu6_7" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_4/ClassPredictor/BiasAdd" out_port_id="0"/>
+		<IR id="301" name="WeightSharedConvolutionalBoxPredictor_4/ClassPredictor/Conv2D/Transpose" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_4/Reshape_1" out_port_id="0"/>
+		<IR id="303" name="WeightSharedConvolutionalBoxPredictor_4/ClassPredictor/BiasAdd/Reshape" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_1/bottleneck_v1/conv1/Relu6" out_port_id="0"/>
+		<IR id="30" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_1/bottleneck_v1/conv1/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_3/bottleneck_v1/conv1/Relu6" out_port_id="0"/>
+		<IR id="44" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block2/unit_3/bottleneck_v1/conv1/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_5/bottleneck_v1/conv2/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="89" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block3/unit_5/bottleneck_v1/conv2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_1/BoxPredictionTower/conv2d_1/BatchNorm/feature_1/FusedBatchNorm" out_port_id="0"/>
+		<IR id="191" name="WeightSharedConvolutionalBoxPredictor_1/BoxPredictionTower/conv2d_1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/fpn/bottom_up_block5/Relu6" out_port_id="0"/>
+		<IR id="214" name="FeatureExtractor/resnet_v1_50/fpn/bottom_up_block5/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_3/BoxPredictionTower/conv2d_2/BatchNorm/feature_3/FusedBatchNorm" out_port_id="0"/>
+		<IR id="219" name="WeightSharedConvolutionalBoxPredictor_3/BoxPredictionTower/conv2d_2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_2/ClassPredictionTower/conv2d_0/BatchNorm/feature_2/FusedBatchNorm" out_port_id="0"/>
+		<IR id="268" name="WeightSharedConvolutionalBoxPredictor_2/ClassPredictionTower/conv2d_0/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_3/ClassPredictionTower/conv2d_3/BatchNorm/feature_3/FusedBatchNorm" out_port_id="0"/>
+		<IR id="286" name="WeightSharedConvolutionalBoxPredictor_3/ClassPredictionTower/conv2d_3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="WeightSharedConvolutionalBoxPredictor_4/Relu6_5" out_port_id="0"/>
+		<IR id="295" name="WeightSharedConvolutionalBoxPredictor_4/Relu6_5" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detection_boxes" out_port_id="0"/>
+		<IR id="316" name="DetectionOutput" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/MaxPool2D/MaxPool" out_port_id="0"/>
+		<IR id="27" name="FeatureExtractor/resnet_v1_50/resnet_v1_50/block1/MaxPool2D/MaxPool" out_port_id="1"/>
+	</map>
+</mapping>
